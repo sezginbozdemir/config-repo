@@ -1,0 +1,8 @@
+# Neovim: ignore plugin directory 
+nvim/plugged/
+
+# Node / npm 
+nvim/node_modules/
+nvim/package-lock.json
+nvim/package.json
+

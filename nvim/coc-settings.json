@@ -1,0 +1,30 @@
+{
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.snippets.enable": true,
+  "suggest.snippetSupport": false,
+  "coc.preferences.extensionUpdateCheck": "never",
+  "suggest.disableMenu": true,
+  "coc.preferences.enableReference": true,
+  "suggest.autoComplete": "on",
+  "suggest.confirmKey": "Enter",
+  "suggest.insertMode": "replace",
+  "suggest.noselect": false,
+  "suggest.confirmCompletion": "auto",
+  "prettier.enable": true,
+  "prettier.requireConfig": false,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.renamePrompt": true,
+  "coc.preferences.insertMode": "replace",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.git.enable": true,
+  "list.source.menu.enable": true,
+  "list.source.menu.fuzzyMatch": true,
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    }
+  }
+}
