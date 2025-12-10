@@ -41,7 +41,7 @@ set completeopt=menuone,noinsert,noselect " Configure ocotions for popup menu be
 
 
 " Open file explorer if no file is passed on startup
-autocmd VimEnter * if argc() == 0 | execute 'NvimTreeOpen' | endif
+" autocmd VimEnter * if argc() == 0 | execute 'NvimTreeOpen' | endif
 
 " Enable omnifunc autocomplete for TypeScript and JSON
 autocmd FileType typescript,json setlocal omnifunc=v:lua.vim.lsp.omnifunc
@@ -71,8 +71,9 @@ Plug 'andymass/vim-matchup'							" Better % matching for HTML/JSX/etc.
 
 
 " --- File tree & UI ---
-
-Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvimdev/dashboard-nvim'
+Plug 'mikavilpas/yazi.nvim'
+" Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }		" Better buffer tabline
 Plug 'MunifTanjim/nui.nvim'							" UI library for floating windows
@@ -135,12 +136,51 @@ lua << EOF
 -----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 
+-----------------------------------------------------------------------------------------
+-- dashboard 
+-----------------------------------------------------------------------------------------
+
+
+local dashboard_config = {
+	theme = 'hyper',				-- theme is doom and hyper default is hyper
+    disable_move = false,       -- default is false disable move keymap for hyper
+	shortcut_type = 'number',   -- shortcut type 'letter' or 'number'
+	shuffle_letter = false,		-- default is false, shortcut 'letter' will be randomize, set to false to have ordered letter
+	-- letter_list				-- default is a-z, excluding j and k
+	-- change_to_vcs_root		-- default is false,for open file in hyper mru. it will change to the root of vcs
+	config = {},				-- config used for theme
+	hide = {
+		statusline = false,     -- hide statusline default is true
+		tabline = false,        -- hide the tabline
+		winbar = false,         -- hide winbar
+			},
+	-- preview = {
+		--  command				-- preview command
+		--  file_path			-- preview file path
+		--  file_height			-- preview file height
+		--  file_width			-- preview file width
+			--},
+	} 
+
+require("dashboard").setup(dashboard_config) 
+
+
+
 
 -----------------------------------------------------------------------------------------
 -- to-do comments
 -----------------------------------------------------------------------------------------
 
 require("todo-comments").setup() 
+
+-----------------------------------------------------------------------------------------
+-- yazi 
+-----------------------------------------------------------------------------------------
+
+
+local yazi_config = {} 
+
+require("yazi").setup(yazi_config) 
 
 
 
@@ -293,7 +333,7 @@ local nvimtree_config = {
   },
 }
 
-require("nvim-tree").setup(nvimtree_config)
+-- require("nvim-tree").setup(nvimtree_config)
 
 -----------------------------------------------------------------------------------------
 -- Treesitter 
@@ -344,6 +384,7 @@ EOF
 " =================================
 " Keybindings 
 " =================================
+
 
 
 " Rename word under cursor 
@@ -417,11 +458,16 @@ nnoremap <silent>gD <cmd>Telescope lsp_definitions<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Yazi 
+" =================================
+
+nnoremap <C-n> :Yazi<CR>
+
 " NvimTree toggles
 " =================================
 
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <silent><C-e> :NvimTreeFocus<CR>
+" nnoremap <C-n> :NvimTreeToggle<CR>
+" nnoremap <silent><C-e> :NvimTreeFocus<CR>
 
 " SearchBox
 " =================================
