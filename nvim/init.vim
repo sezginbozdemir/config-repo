@@ -243,9 +243,9 @@ require("mason-lspconfig").setup()
 -- Telescope 
 -----------------------------------------------------------------------------------------
 
-local telescop_config = {
+local telescope_config = {
   defaults = {
-    path_display = { "" },  
+    path_display = { "smart" },
     prompt_prefix = "🔍 ",
     selection_caret = "→ ",
     layout_config = {
@@ -253,7 +253,14 @@ local telescop_config = {
       vertical = { height = 0.9 },
     },
   },
+  pickers = {
+    lsp_definitions = { path_display = { "relative" } },
+    lsp_references = { path_display = { "relative" } },
+    lsp_implementations = { path_display = { "relative" } },
+    lsp_type_definitions = { path_display = { "relative" } },
+  },
 }
+
 
 require('telescope').setup(telescop_config)
 
