@@ -142,25 +142,30 @@ lua << EOF
 
 
 local dashboard_config = {
-	theme = 'hyper',				-- theme is doom and hyper default is hyper
-    disable_move = false,       -- default is false disable move keymap for hyper
-	shortcut_type = 'number',   -- shortcut type 'letter' or 'number'
-	shuffle_letter = false,		-- default is false, shortcut 'letter' will be randomize, set to false to have ordered letter
-	-- letter_list				-- default is a-z, excluding j and k
-	-- change_to_vcs_root		-- default is false,for open file in hyper mru. it will change to the root of vcs
-	config = {},				-- config used for theme
-	hide = {
-		statusline = false,     -- hide statusline default is true
-		tabline = false,        -- hide the tabline
-		winbar = false,         -- hide winbar
-			},
-	-- preview = {
-		--  command				-- preview command
-		--  file_path			-- preview file path
-		--  file_height			-- preview file height
-		--  file_width			-- preview file width
-			--},
-	} 
+theme = 'hyper',
+    config = {
+      week_header = {
+       enable = true,
+      },
+      shortcut = {
+        { desc = '󰊳 Update', group = '@property', action = 'PlugUpdate', key = 'u' },
+		{ desc = ' Install', group = 'DiagnosticHint', action = 'PlugInstall', key = 'd' },
+        {
+          icon = ' ',
+          icon_hl = 'Label',
+          desc = 'Files',
+          group = 'Label',
+          action = 'Yazi',
+          key = 'f',
+        },
+        {
+          desc = ' Config',
+          group = 'Number',
+          action = ':edit ~/.config/nvim/init.vim',
+          key = 'a',
+        },
+      },
+    },} 
 
 require("dashboard").setup(dashboard_config) 
 
