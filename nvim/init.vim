@@ -94,7 +94,7 @@ Plug 'nvim-lua/plenary.nvim'						" Lua utility functions for plugins
 
 " --- Syntax & highlighting & Treesitter ---
 
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}	" Treesitter for better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate'}	" Treesitter for better syntax highlighting
 Plug 'mxw/vim-jsx'									" JSX support for JavaScript
 Plug 'https://github.com/ap/vim-css-color'			" Show CSS colors in code
 
