@@ -21,6 +21,7 @@
 # via `npm` (global)
 
 - **vercel** — Vercel CLI for deploying and managing projects (deployments, environment variables, logs, and project settings).
+- **aicommits** — CLI for generating concise Git commit messages automatically from your staged changes using AI.
 
 # via `brew`
 
