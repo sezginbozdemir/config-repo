@@ -17,6 +17,7 @@
 - **stress-ng** — System stress testing and benchmarking tool (CPU, memory, I/O, etc.).
 - **wget** — Command-line downloader for HTTP/HTTPS/FTP.
 - **ifuse** — Mount iPhone/iPad storage via FUSE using libimobiledevice (access files on iOS devices).
+- **zoxide (z)** — Smart directory jumper; tracks your most-used directories and lets you quickly jump to them with `z <name>`.
 
 # via `npm` (global)
 
@@ -25,6 +26,5 @@
 
 # via `brew`
 
-**tlrc** — Community `tldr` client; shows short, practical command examples (a simplified “cheat sheet” for common CLI commands).
-
+- **tlrc** — Community `tldr` client; shows short, practical command examples (a simplified “cheat sheet” for common CLI commands).
 - **viu** — Displays images directly in the terminal (using terminal graphics protocols where supported).
