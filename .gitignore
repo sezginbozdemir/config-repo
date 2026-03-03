@@ -1,2 +1,6 @@
 nvim/plugged/
+nvim/node_modules/
+nvim/package-lock.json
+nvim/package.json
 .zsh_secrets
+.bashrc_private
