@@ -1,3 +1,7 @@
+# Spicetify
+
+export PATH=$PATH:~/.spicetify
+
 # Alias
 alias bashrc="nvim ~/.bashrc"
 alias source_bashrc="source ~/.bashrc"
@@ -69,3 +73,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Private secrets (not committed)
 [ -f "$HOME/.bashrc_private" ] && . "$HOME/.bashrc_private"
+
+export PATH=$PATH:/home/sez/.spicetify

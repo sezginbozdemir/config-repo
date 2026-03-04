@@ -28,3 +28,4 @@
 
 - **tlrc** — Community `tldr` client; shows short, practical command examples (a simplified “cheat sheet” for common CLI commands).
 - **viu** — Displays images directly in the terminal (using terminal graphics protocols where supported).
+- **Spicetify** — A CLI tool to customize the Spotify desktop client (themes, CSS tweaks, extensions, and custom apps).
