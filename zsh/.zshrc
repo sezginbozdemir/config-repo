@@ -92,3 +92,5 @@ alias icat="kitten icat"
 alias clock="tty-clock -S -s -c -C 3"
 
 
+
+export PATH=$PATH:/Users/sez/.spicetify
