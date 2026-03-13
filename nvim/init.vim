@@ -93,7 +93,7 @@ Plug 'nvim-lua/plenary.nvim'						" Lua utility functions for plugins
 
 
 " --- Syntax & highlighting & Treesitter ---
-
+Plug 'davidmh/mdx.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate'}	" Treesitter for better syntax highlighting
 Plug 'mxw/vim-jsx'									" JSX support for JavaScript
 Plug 'https://github.com/ap/vim-css-color'			" Show CSS colors in code
@@ -241,7 +241,6 @@ local mason_lspconfig = {
 require("mason").setup()
 
 require("mason-lspconfig").setup()
-
 
 
 -----------------------------------------------------------------------------------------
